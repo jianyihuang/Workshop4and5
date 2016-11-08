@@ -147,11 +147,10 @@ return (
       data.comments.map((comment, i) => {
     // i is comment's index in comments array
     return (
-    <Comment key={i}
-    author={comment.author}
-    postDate={comment.postDate}>
-    {comment.contents}
-    </Comment>
+      <Comment key={i}
+        data={comment}
+        feedItemKey={this.state._id}
+        commentIndex = {i}/>
     );
     })
   }
